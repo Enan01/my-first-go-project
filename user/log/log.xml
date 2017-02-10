@@ -1,0 +1,18 @@
+<seelog>
+    <!--去找id为main的格式-->
+    <outputs formatid="main">
+        <!--定义记录格式-->
+        <filter levels="info,debug,critical,error">
+            <!--向屏幕输出-->
+            <console />
+        </filter>
+        <filter levels="debug">
+            <!--向文件输出。可以多个共存。-->
+            <file path="debug.txt" />
+        </filter>
+    </outputs>
+    <formats>
+        <!--format内容，可以多个共存，只要id不相同。然后上面可以用不同的id来输出不同格式的日志。-->
+        <format id="main" format="%Date/%Time [%LEV] %Msg%n"/>
+    </formats>
+</seelog>
